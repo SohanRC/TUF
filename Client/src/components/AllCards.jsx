@@ -77,9 +77,7 @@ export default function AllCards() {
         width="200"
         color="#37B7C3"
         ariaLabel="infinity-spin-loading"
-      /> : null}
-
-      <main className='flex justify-center items-center gap-5 flex-wrap '>
+      /> : <main className='flex justify-center items-center gap-5 flex-wrap '>
         {
           cards && cards.map((card) => {
             return <div className='flex flex-col border-2 border-slate-800 rounded-md bg-slate-300' key={card.id}>
@@ -95,7 +93,7 @@ export default function AllCards() {
           }
           )
         }
-      </main>
+      </main>}
     </div>
   )
 }

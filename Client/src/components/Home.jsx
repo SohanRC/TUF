@@ -59,9 +59,7 @@ export default function Home() {
         width="200"
         color="#37B7C3"
         ariaLabel="infinity-spin-loading"
-      /> : null}
-
-      <main className='flex justify-center items-center gap-5 flex-wrap flex-col'>
+      /> : <main className='flex justify-center items-center gap-5 flex-wrap flex-col'>
         {index !== null && <FlashCard question={cards[index].question} answer={cards[index].answer} handleClick={handleClick} />}
 
         <div className='w-full flex gap-5 justify-around'>
@@ -73,7 +71,7 @@ export default function Home() {
 
         </div>
 
-      </main>
+      </main>}
     </div>
   )
 }
