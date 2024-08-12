@@ -85,7 +85,7 @@ function Header(props) {
   return (
     <Box sx={{ display: 'flex', position: 'sticky' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ bgcolor: "#173B45", flexWrap: "wrap" }} position='fixed' className='relative '>
+      <AppBar component="nav" sx={{ bgcolor: "#44A08D", flexWrap: "wrap" }} position='fixed' className='relative'>
         <Toolbar>
           <Typography
             variant="h6"

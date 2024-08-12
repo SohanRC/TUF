@@ -51,9 +51,9 @@ export default function Home() {
   }
 
   return (
-    <div className='min-h-screen w-screen bg-slate-500 flex justify-center items-center font-serif flex-col gap-5'>
-      <h1 className='text-white text-5xl font-montserrat'>Admin Email : test@gmail.com</h1>
-      <h1 className='text-white text-5xl font-montserrat'>Admin Password : 12345</h1>
+    <div className='min-h-screen w-screen flex justify-center items-center font-serif flex-col gap-5 bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e]'>
+      <h1 className='text-white text-3xl font-montserrat'>Admin Email : test@gmail.com</h1>
+      <h1 className='text-white text-3xl font-montserrat'>Admin Password : 12345</h1>
       <h1 className='text-white text-5xl font-montserrat'>Welcome To FlashCards</h1>
 
       {loading ? <InfinitySpin
@@ -65,10 +65,10 @@ export default function Home() {
         {index !== null && <FlashCard question={cards[index].question} answer={cards[index].answer} handleClick={handleClick} />}
 
         <div className='w-full flex gap-5 justify-around'>
-          {index + 1 < cards.length && <button onClick={() => setIndex(index + 1)} className='my-2 text-white  py-1 px-3 bg-slate-900 text-xl font-bold rounded-md shadow-md hover:bg-slate-800 '> Next
+          {index + 1 < cards.length && <button onClick={() => setIndex(index + 1)} className='my-2 text-white  py-3 px-3 bg-slate-900 text-xl font-bold rounded-md shadow-md hover:bg-slate-850 '> Next
           </button>}
 
-          {index - 1 >= 0 && <button onClick={() => setIndex(index - 1)} className='my-2 text-white  py-1 px-3 bg-slate-900 text-xl font-bold rounded-md shadow-md hover:bg-slate-800 '> Prev
+          {index - 1 >= 0 && <button onClick={() => setIndex(index - 1)} className='my-2 text-white  py-3 px-3 bg-slate-900 text-xl font-bold rounded-md shadow-md hover:bg-slate-850 '> Prev
           </button>}
 
         </div>

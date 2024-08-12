@@ -53,7 +53,7 @@ export default function Signin() {
     }
   }
   return (
-    <div className='h-screen w-screen flex bg-slate-500 justify-center items-center font-montserrat'>
+    <div className='h-screen w-screen flex bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] justify-center items-center font-montserrat'>
       <form action="" className='border-2 border-white p-5 flex flex-col gap-2 bg-slate-700' onSubmit={submitHandler}>
         <h2 className='text-4xl text-white font-bold'>Admin Signin</h2>
         <label htmlFor="email" className='text-md font-bold text-white cursor-pointer'>Email</label>

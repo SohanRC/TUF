@@ -69,7 +69,7 @@ export default function AllCards() {
   }
 
   return (
-    <div className='min-h-screen w-screen bg-slate-500 flex justify-center items-center font-serif flex-col gap-5'>
+    <div className='min-h-screen w-screen bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] flex justify-center items-center font-serif flex-col gap-5'>
       <h1 className='text-white text-5xl font-montserrat'>Edit FlashCards</h1>
 
       {loading ? <InfinitySpin
