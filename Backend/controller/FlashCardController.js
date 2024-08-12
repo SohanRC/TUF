@@ -2,7 +2,7 @@ import db from "../config/dbConnect.js";
 import errorhandler from "../utils/errorhandler.js";
 
 export async function getAllCards(req, res, next) {
-    db.query('SELECT * FROM tuf.flashcards', (err, data) => {
+    db.query('SELECT * FROM flashcards', (err, data) => {
         if (err) {
             console.log(err)
             next(err)
