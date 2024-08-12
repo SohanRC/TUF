@@ -52,6 +52,8 @@ export default function Home() {
 
   return (
     <div className='min-h-screen w-screen bg-slate-500 flex justify-center items-center font-serif flex-col gap-5'>
+      <h1 className='text-white text-5xl font-montserrat'>Admin Email : test@gmail.com</h1>
+      <h1 className='text-white text-5xl font-montserrat'>Admin Password : 12345</h1>
       <h1 className='text-white text-5xl font-montserrat'>Welcome To FlashCards</h1>
 
       {loading ? <InfinitySpin
