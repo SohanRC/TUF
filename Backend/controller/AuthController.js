@@ -77,7 +77,7 @@ import errorhandler from "../utils/errorhandler.js";
 export async function login(req, res, next) {
     const { email, password } = req.body;
     console.log(email, password)
-    const q = "SELECT * FROM users WHERE email = (?) AND password = (?);";
+    const q = "SELECT * FROM tuf.users WHERE email = (?) AND password = (?);";
     const values = [email, password];
     db.query(q, values, (err, data) => {
         if (err || Object.keys(data).length == 0) {

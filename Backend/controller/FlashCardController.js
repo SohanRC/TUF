@@ -18,7 +18,7 @@ export async function getAllCards(req, res, next) {
 
 export async function getCardByID(req, res, next) {
     const { id } = req.params;
-    const q = 'SELECT * FROM flashcards WHERE id = (?)'
+    const q = 'SELECT * FROM tuf.flashcards WHERE id = (?)'
     const values = [id]
     db.query(q, values, (err, data) => {
         if (err || Object.keys(data).length == 0) {
@@ -38,7 +38,7 @@ export async function EditCard(req, res, next) {
     const { id } = req.params;
     const { question, answer } = req.body;
 
-    const q = `UPDATE flashcards 
+    const q = `UPDATE tuf.flashcards 
     SET question = (?), answer = (?) 
     WHERE id = (?)`;
     const values = [question, answer, id];
@@ -57,7 +57,7 @@ export async function EditCard(req, res, next) {
 }
 export async function DeleteCard(req, res, next) {
     const { id } = req.params;
-    const q = `DELETE FROM flashcards WHERE id = (?)`
+    const q = `DELETE FROM tuf.flashcards WHERE id = (?)`
     const values = [id];
 
     db.query(q, values, (err, data) => {
@@ -76,7 +76,7 @@ export async function DeleteCard(req, res, next) {
 
 export async function addCard(req, res, next) {
     const { question, answer } = req.body;
-    const q = "INSERT INTO flashcards (`question`,`answer`) VALUES (?)"
+    const q = "INSERT INTO tuf.flashcards (`question`,`answer`) VALUES (?)"
     const values = [question, answer];
     db.query(q, [values], (err, data) => {
         if (err) {
