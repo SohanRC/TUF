@@ -78,7 +78,7 @@ export async function addCard(req, res, next) {
     const { question, answer } = req.body;
     const q = "INSERT INTO tuf.flashcards (`question`,`answer`) VALUES (?)"
     const values = [question, answer];
-    db.query(q, [values], (err, data) => {
+    db.query(q, [values], (err) => {
         if (err) {
             console.log(err)
             next(err)
